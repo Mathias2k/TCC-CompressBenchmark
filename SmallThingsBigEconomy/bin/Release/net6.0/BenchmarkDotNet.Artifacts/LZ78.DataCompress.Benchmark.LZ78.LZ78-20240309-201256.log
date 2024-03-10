@@ -1,0 +1,68 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 1 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\bin\Release\net6.0\2ae268f1-4403-43fa-9405-fa4bde9a0e7f
+// command took 1.8 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\bin\Release\net6.0\2ae268f1-4403-43fa-9405-fa4bde9a0e7f
+// command took 13.18 sec and exited with 1
+// start dotnet  build -c Release --no-restore --no-dependencies /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\bin\Release\net6.0\2ae268f1-4403-43fa-9405-fa4bde9a0e7f
+// command took 2.22 sec and exited with 0
+// ***** Done, took 00:00:17 (17.53 sec)   *****
+// Found 1 benchmarks:
+//   LZ78.Compress: DefaultJob
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto desempenho)
+// **************************
+// Benchmark: LZ78.Compress: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 2ae268f1-4403-43fa-9405-fa4bde9a0e7f.dll --anonymousPipes 1408 1412 --benchmarkName LZ78.DataCompress.Benchmark.LZ78.LZ78.Compress --job Default --benchmarkId 0 in C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\bin\Release\net6.0\2ae268f1-4403-43fa-9405-fa4bde9a0e7f\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.8
+// Runtime=.NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 171200.00 ns, 171.2000 us/op
+WorkloadJitting  1: 1 op, 1340500.00 ns, 1.3405 ms/op
+
+OverheadJitting  2: 16 op, 162900.00 ns, 10.1813 us/op
+WorkloadJitting  2: 16 op, 223700.00 ns, 13.9812 us/op
+
+WorkloadPilot    1: 16 op, 61300.00 ns, 3.8312 us/op
+WorkloadPilot    2: 32 op, 120600.00 ns, 3.7687 us/op
+WorkloadPilot    3: 64 op, 231700.00 ns, 3.6203 us/op
+WorkloadPilot    4: 128 op, 476200.00 ns, 3.7203 us/op
+WorkloadPilot    5: 256 op, 1070000.00 ns, 4.1797 us/op
+WorkloadPilot    6: 512 op, 2602800.00 ns, 5.0836 us/op
+WorkloadPilot    7: 1024 op, 4276800.00 ns, 4.1766 us/op
+WorkloadPilot    8: 2048 op, 8857000.00 ns, 4.3247 us/op
+WorkloadPilot    9: 4096 op, 15916700.00 ns, 3.8859 us/op
+WorkloadPilot   10: 8192 op, 30281500.00 ns, 3.6965 us/op
+WorkloadPilot   11: 16384 op, 58339100.00 ns, 3.5607 us/op
+WorkloadPilot   12: 32768 op, 92076700.00 ns, 2.8100 us/op
+WorkloadPilot   13: 65536 op, 188215400.00 ns, 2.8719 us/op
+WorkloadPilot   14: 131072 op, 370015200.00 ns, 2.8230 us/op
+WorkloadPilot   15: 262144 op, 738109300.00 ns, 2.8157 us/op
+
+OverheadWarmup   1: 262144 op, 491200.00 ns, 1.8738 ns/op
+OverheadWarmup   2: 262144 op, 485800.00 ns, 1.8532 ns/op
+OverheadWarmup   3: 262144 op, 636900.00 ns, 2.4296 ns/op
+OverheadWarmup   4: 262144 op, 495800.00 ns, 1.8913 ns/op
+OverheadWarmup   5: 262144 op, 482300.00 ns, 1.8398 ns/op
+OverheadWarmup   6: 262144 op, 490500.00 ns, 1.8711 ns/op
+OverheadWarmup   7: 262144 op, 492200.00 ns, 1.8776 ns/op
+OverheadWarmup   8: 262144 op, 493200.00 ns, 1.8814 ns/op
+OverheadWarmup   9: 262144 op, 502600.00 ns, 1.9173 ns/op
+OverheadWarmup  10: 262144 op, 574500.00 ns, 2.1915 ns/op
+
+OverheadActual   1: 262144 op, 534000.00 ns, 2.0370 ns/op
+OverheadActual   2: 262144 op, 526200.00 ns, 2.0073 ns/op
+OverheadActual   3: 262144 op, 748500.00 ns, 2.8553 ns/op
+OverheadActual   4: 262144 op, 526300.00 ns, 2.0077 ns/op
+OverheadActual   5: 262144 op, 696800.00 ns, 2.6581 ns/op
+OverheadActual   6: 262144 op, 530400.00 ns, 2.

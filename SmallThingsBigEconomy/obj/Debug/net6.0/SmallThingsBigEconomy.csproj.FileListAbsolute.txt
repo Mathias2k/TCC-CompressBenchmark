@@ -1,0 +1,15 @@
+C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\bin\Debug\net6.0\SmallThingsBigEconomy.exe
+C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\bin\Debug\net6.0\SmallThingsBigEconomy.deps.json
+C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\bin\Debug\net6.0\SmallThingsBigEconomy.runtimeconfig.json
+C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\bin\Debug\net6.0\SmallThingsBigEconomy.dll
+C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\bin\Debug\net6.0\SmallThingsBigEconomy.pdb
+C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\obj\Debug\net6.0\SmallThingsBigEconomy.csproj.AssemblyReference.cache
+C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\obj\Debug\net6.0\SmallThingsBigEconomy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\obj\Debug\net6.0\SmallThingsBigEconomy.AssemblyInfoInputs.cache
+C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\obj\Debug\net6.0\SmallThingsBigEconomy.AssemblyInfo.cs
+C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\obj\Debug\net6.0\SmallThingsBigEconomy.csproj.CoreCompileInputs.cache
+C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\obj\Debug\net6.0\SmallThingsBigEconomy.dll
+C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\obj\Debug\net6.0\refint\SmallThingsBigEconomy.dll
+C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\obj\Debug\net6.0\SmallThingsBigEconomy.pdb
+C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\obj\Debug\net6.0\SmallThingsBigEconomy.genruntimeconfig.cache
+C:\Users\dddd\source\repos\SmallThingsBigEconomy\SmallThingsBigEconomy\obj\Debug\net6.0\ref\SmallThingsBigEconomy.dll

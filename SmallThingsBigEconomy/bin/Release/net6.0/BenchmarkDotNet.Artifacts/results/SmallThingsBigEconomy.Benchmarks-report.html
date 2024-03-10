@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>SmallThingsBigEconomy.Benchmarks-20230924-181223</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.8, Windows 10 (10.0.19045.3448/22H2/2022Update)
+AMD FX(tm)-6300, 1 CPU, 6 logical and 3 physical cores
+.NET SDK 6.0.402
+  [Host]     : .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX [AttachedDebugger]
+  DefaultJob : .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method             </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Ratio</th><th>RatioSD</th><th>Rank</th><th>Gen0</th><th>Allocated</th><th>Alloc Ratio</th>
+</tr>
+</thead><tbody><tr><td>Equals_OrdinalIgnoreCase</td><td>3.922 ns</td><td>0.1173 ns</td><td>0.3364 ns</td><td>3.994 ns</td><td>1.00</td><td>0.00</td><td>1</td><td>-</td><td>-</td><td>NA</td>
+</tr><tr><td>Compare_OrdinalIgnoreCase</td><td>3.843 ns</td><td>0.1252 ns</td><td>0.3632 ns</td><td>3.700 ns</td><td>0.99</td><td>0.17</td><td>1</td><td>-</td><td>-</td><td>NA</td>
+</tr><tr><td>ToLower</td><td>132.409 ns</td><td>2.6881 ns</td><td>5.6700 ns</td><td>134.049 ns</td><td>34.83</td><td>3.36</td><td>3</td><td>0.0229</td><td>96 B</td><td>NA</td>
+</tr><tr><td>ToUpper</td><td>75.128 ns</td><td>1.2763 ns</td><td>2.2354 ns</td><td>74.929 ns</td><td>20.45</td><td>2.16</td><td>2</td><td>-</td><td>-</td><td>NA</td>
+</tr></tbody></table>
+</body>
+</html>
