@@ -1,142 +1,61 @@
-﻿namespace DataCompress.Service.Huffman
+﻿using BenchmarkDotNet.Attributes;
+using DataCompress.Service.PDF;
+using iText.Forms.Form.Element;
+
+namespace DataCompress.Service.Huffman
 {
-    public class HuffmanTree
+    [RankColumn]
+    [MemoryDiagnoser]
+    public class Huffman
     {
-        private static Dictionary<char, string> _encodingTable;
-        public static string HuffmanCompress(string input)
+        [Benchmark]
+        public Dictionary<char, string> CompressHuffman(string inputFile)
         {
-            //string input = "ABCABCBABCBABBCBCBCBEBEBDBEBABDBABBDBABABABABABABABABABABABABAABAB";
-            _encodingTable = new Dictionary<char, string>();
-            Dictionary<char, int> frequencyTable = new();
+            string input = PDFService.LerPDF(inputFile);
 
-            foreach (char c in input)
-            {
-                if (!frequencyTable.ContainsKey(c))
-                    frequencyTable[c] = 0;
-                frequencyTable[c]++;
-            }
-
-            List<HuffmanNode> nodes = frequencyTable.Select(kv => new HuffmanNode { Data = kv.Key, Frequency = kv.Value }).ToList();
+            Dictionary<char, int> frequencyMap = input.GroupBy(c => c).ToDictionary(g => g.Key, g => g.Count());
+            List<HuffmanNode> nodes = frequencyMap.Select(pair => new HuffmanNode { Symbol = pair.Key, Frequency = pair.Value }).ToList();
 
             while (nodes.Count > 1)
             {
-                nodes.Sort((x, y) => x.Frequency.CompareTo(y.Frequency));
-                HuffmanNode left = nodes[0];
-                HuffmanNode right = nodes[1];
-                nodes.Remove(left);
-                nodes.Remove(right);
-                HuffmanNode parent = new HuffmanNode { Data = '*', Frequency = left.Frequency + right.Frequency, Left = left, Right = right };
+                nodes = nodes.OrderBy(node => node.Frequency).ToList();
+                HuffmanNode parent = new()
+                {
+                    Frequency = nodes[0].Frequency + nodes[1].Frequency,
+                    Left = nodes[0],
+                    Right = nodes[1]
+                };
+                nodes.RemoveRange(0, 2);
                 nodes.Add(parent);
             }
 
-            HuffmanNode root = nodes.FirstOrDefault();
-            BuildEncodingTable(root, "");
-            string encodedString = string.Join("", input.Select(c => _encodingTable[c]));
+            HuffmanNode root = nodes.Single();
 
-            return encodedString;
+            Dictionary<char, string> encodingMap = new();
+            Traverse(root, "", encodingMap);
+
+            return encodingMap;
         }
-
-        private static void BuildEncodingTable(HuffmanNode node, string code)
+        private static void Traverse(HuffmanNode node, string encoding, Dictionary<char, string> encodingMap)
         {
-            if (node == null) return;
             if (node.Left == null && node.Right == null)
             {
-                _encodingTable[node.Data] = code;
+                encodingMap.Add(node.Symbol, encoding);
                 return;
             }
-            BuildEncodingTable(node.Left, code + "0");
-            BuildEncodingTable(node.Right, code + "1");
+
+            Traverse(node.Left, encoding + "0", encodingMap);
+            Traverse(node.Right, encoding + "1", encodingMap);
+        }
+        public static double GetCompressedSize(string compressed)
+        {
+            // Tamanho da mensagem comprimida em bits
+            int compressedSizeInBits = compressed.Length;
+
+            // Converter para megabytes (MB)
+            double compressedSizeInMB = (double)compressedSizeInBits / (8 * 1024 * 1024);
+
+            return compressedSizeInMB;
         }
     }
-
-    //decompress
-    //    using System;
-    //using System.Collections.Generic;
-
-    //class HuffmanNode
-    //    {
-    //        public char Data { get; set; }
-    //        public int Frequency { get; set; }
-    //        public HuffmanNode Left { get; set; }
-    //        public HuffmanNode Right { get; set; }
-    //    }
-
-    //    class HuffmanTree
-    //    {
-    //        private static Dictionary<char, string> _encodingTable;
-
-    //        public static void Compress(string input)
-    //        {
-    //            _encodingTable = new Dictionary<char, string>();
-    //            Dictionary<char, int> frequencyTable = new Dictionary<char, int>();
-
-    //            foreach (char c in input)
-    //            {
-    //                if (!frequencyTable.ContainsKey(c))
-    //                    frequencyTable[c] = 0;
-    //                frequencyTable[c]++;
-    //            }
-
-    //            List<HuffmanNode> nodes = frequencyTable.Select(kv => new HuffmanNode { Data = kv.Key, Frequency = kv.Value }).ToList();
-
-    //            while (nodes.Count > 1)
-    //            {
-    //                nodes.Sort((x, y) => x.Frequency.CompareTo(y.Frequency));
-    //                HuffmanNode left = nodes[0];
-    //                HuffmanNode right = nodes[1];
-    //                nodes.Remove(left);
-    //                nodes.Remove(right);
-    //                HuffmanNode parent = new HuffmanNode { Data = '*', Frequency = left.Frequency + right.Frequency, Left = left, Right = right };
-    //                nodes.Add(parent);
-    //            }
-
-    //            HuffmanNode root = nodes.FirstOrDefault();
-    //            BuildEncodingTable(root, "");
-    //            string encodedString = string.Join("", input.Select(c => _encodingTable[c]));
-    //            Console.WriteLine("Encoded string: " + encodedString);
-    //        }
-
-    //        private static void BuildEncodingTable(HuffmanNode node, string code)
-    //        {
-    //            if (node == null) return;
-    //            if (node.Left == null && node.Right == null)
-    //            {
-    //                _encodingTable[node.Data] = code;
-    //                return;
-    //            }
-    //            BuildEncodingTable(node.Left, code + "0");
-    //            BuildEncodingTable(node.Right, code + "1");
-    //        }
-
-    //        public static string Decompress(string encodedString)
-    //        {
-    //            string result = "";
-    //            HuffmanNode current = root;
-    //            foreach (char bit in encodedString)
-    //            {
-    //                if (bit == '0')
-    //                    current = current.Left;
-    //                else
-    //                    current = current.Right;
-
-    //                if (current.Left == null && current.Right == null)
-    //                {
-    //                    result += current.Data;
-    //                    current = root;
-    //                }
-    //            }
-    //            return result;
-    //        }
-    //    }
-
-    //    class Program
-    //    {
-    //        static void Main(string[] args)
-    //        {
-    //            string input = "hello world";
-    //            Console.WriteLine("Original string: " + input);
-    //            HuffmanTree.Compress(input);
-    //        }
-    //    }
-
 }

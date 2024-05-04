@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.8" />
     <PackageReference Include="itext7" Version="8.0.3" />
     <PackageReference Include="itext7.bouncy-castle-adapter" Version="8.0.3" />
     <PackageReference Include="MongoDB.Driver" Version="2.24.0" />

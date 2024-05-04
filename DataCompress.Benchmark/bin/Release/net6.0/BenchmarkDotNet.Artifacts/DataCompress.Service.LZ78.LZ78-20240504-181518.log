@@ -1,0 +1,184 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 1 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\dddd\source\repos\TCC-CompressBenchmark\DataCompress.Benchmark\bin\Release\net6.0\a09a3577-bd86-42d1-a3f1-cdcd166016a4
+// command took 1.19 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\dddd\source\repos\TCC-CompressBenchmark\DataCompress.Benchmark\bin\Release\net6.0\a09a3577-bd86-42d1-a3f1-cdcd166016a4
+// command took 2.21 sec and exited with 0
+// ***** Done, took 00:00:03 (3.44 sec)   *****
+// Found 1 benchmarks:
+//   LZ78.Compress: DefaultJob
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto desempenho)
+// **************************
+// Benchmark: LZ78.Compress: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet a09a3577-bd86-42d1-a3f1-cdcd166016a4.dll --anonymousPipes 2000 2508 --benchmarkName DataCompress.Service.LZ78.LZ78.Compress --job Default --benchmarkId 0 in C:\Users\dddd\source\repos\TCC-CompressBenchmark\DataCompress.Benchmark\bin\Release\net6.0\a09a3577-bd86-42d1-a3f1-cdcd166016a4\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.8
+// Runtime=.NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 228800.00 ns, 228.8000 us/op
+tamanho original do arquivo: 2 Mb
+WorkloadJitting  1: 1 op, 1616286400.00 ns, 1.6163 s/op
+
+OverheadJitting  2: 1 op, 600.00 ns, 600.0000 ns/op
+tamanho original do arquivo: 2 Mb
+WorkloadJitting  2: 1 op, 493605800.00 ns, 493.6058 ms/op
+
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   1: 1 op, 454928100.00 ns, 454.9281 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   2: 1 op, 352683600.00 ns, 352.6836 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   3: 1 op, 349526000.00 ns, 349.5260 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   4: 1 op, 339749400.00 ns, 339.7494 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   5: 1 op, 340637400.00 ns, 340.6374 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   6: 1 op, 345947800.00 ns, 345.9478 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   7: 1 op, 350163400.00 ns, 350.1634 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   8: 1 op, 349689700.00 ns, 349.6897 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   9: 1 op, 345109100.00 ns, 345.1091 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup  10: 1 op, 343494000.00 ns, 343.4940 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup  11: 1 op, 346697900.00 ns, 346.6979 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup  12: 1 op, 350853400.00 ns, 350.8534 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup  13: 1 op, 340285300.00 ns, 340.2853 ms/op
+
+// BeforeActualRun
+tamanho original do arquivo: 2 Mb
+WorkloadActual   1: 1 op, 338529800.00 ns, 338.5298 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   2: 1 op, 348835400.00 ns, 348.8354 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   3: 1 op, 348728800.00 ns, 348.7288 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   4: 1 op, 353299300.00 ns, 353.2993 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   5: 1 op, 347217100.00 ns, 347.2171 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   6: 1 op, 339896600.00 ns, 339.8966 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   7: 1 op, 339978900.00 ns, 339.9789 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   8: 1 op, 339614700.00 ns, 339.6147 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   9: 1 op, 339929700.00 ns, 339.9297 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  10: 1 op, 336964000.00 ns, 336.9640 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  11: 1 op, 344620100.00 ns, 344.6201 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  12: 1 op, 338153100.00 ns, 338.1531 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  13: 1 op, 341374700.00 ns, 341.3747 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  14: 1 op, 340331700.00 ns, 340.3317 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  15: 1 op, 334456200.00 ns, 334.4562 ms/op
+
+// AfterActualRun
+tamanho original do arquivo: 2 Mb
+WorkloadResult   1: 1 op, 338529800.00 ns, 338.5298 ms/op
+WorkloadResult   2: 1 op, 348835400.00 ns, 348.8354 ms/op
+WorkloadResult   3: 1 op, 348728800.00 ns, 348.7288 ms/op
+WorkloadResult   4: 1 op, 353299300.00 ns, 353.2993 ms/op
+WorkloadResult   5: 1 op, 347217100.00 ns, 347.2171 ms/op
+WorkloadResult   6: 1 op, 339896600.00 ns, 339.8966 ms/op
+WorkloadResult   7: 1 op, 339978900.00 ns, 339.9789 ms/op
+WorkloadResult   8: 1 op, 339614700.00 ns, 339.6147 ms/op
+WorkloadResult   9: 1 op, 339929700.00 ns, 339.9297 ms/op
+WorkloadResult  10: 1 op, 336964000.00 ns, 336.9640 ms/op
+WorkloadResult  11: 1 op, 344620100.00 ns, 344.6201 ms/op
+WorkloadResult  12: 1 op, 338153100.00 ns, 338.1531 ms/op
+WorkloadResult  13: 1 op, 341374700.00 ns, 341.3747 ms/op
+WorkloadResult  14: 1 op, 340331700.00 ns, 340.3317 ms/op
+WorkloadResult  15: 1 op, 334456200.00 ns, 334.4562 ms/op
+// GC:  25 2 1 425211504 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 29796 has exited with code 0.
+
+Mean = 342.129 ms, StdErr = 1.353 ms (0.40%), N = 15, StdDev = 5.239 ms
+Min = 334.456 ms, Q1 = 339.072 ms, Median = 339.979 ms, Q3 = 345.919 ms, Max = 353.299 ms
+IQR = 6.846 ms, LowerFence = 328.803 ms, UpperFence = 356.188 ms
+ConfidenceInterval = [336.528 ms; 347.730 ms] (CI 99.9%), Margin = 5.601 ms (1.64% of Mean)
+Skewness = 0.64, Kurtosis = 2.2, MValue = 2
+
+// ** Remained 0 (0,0%) benchmark(s) to run. Estimated finish 2024-05-04 18:15 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto desempenho)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\DataCompress.Service.LZ78.LZ78-report.csv
+  BenchmarkDotNet.Artifacts\results\DataCompress.Service.LZ78.LZ78-report-github.md
+  BenchmarkDotNet.Artifacts\results\DataCompress.Service.LZ78.LZ78-report.html
+
+// * Detailed results *
+LZ78.Compress: DefaultJob
+Runtime = .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 342.129 ms, StdErr = 1.353 ms (0.40%), N = 15, StdDev = 5.239 ms
+Min = 334.456 ms, Q1 = 339.072 ms, Median = 339.979 ms, Q3 = 345.919 ms, Max = 353.299 ms
+IQR = 6.846 ms, LowerFence = 328.803 ms, UpperFence = 356.188 ms
+ConfidenceInterval = [336.528 ms; 347.730 ms] (CI 99.9%), Margin = 5.601 ms (1.64% of Mean)
+Skewness = 0.64, Kurtosis = 2.2, MValue = 2
+-------------------- Histogram --------------------
+[331.668 ms ; 342.561 ms) | @@@@@@@@@@
+[342.561 ms ; 356.088 ms) | @@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.13.8, Windows 10 (10.0.19045.4291/22H2/2022Update)
+AMD Ryzen 5 5600, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 6.0.402
+  [Host]     : .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2 [AttachedDebugger]
+  DefaultJob : .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2
+
+
+| Method   | Mean     | Error   | StdDev  | Ratio | Rank | Gen0       | Gen1      | Gen2      | Allocated | Alloc Ratio |
+|--------- |---------:|--------:|--------:|------:|-----:|-----------:|----------:|----------:|----------:|------------:|
+| Compress | 342.1 ms | 5.60 ms | 5.24 ms |  1.00 |    1 | 25000.0000 | 2000.0000 | 1000.0000 | 405.51 MB |        1.00 |
+
+// * Warnings *
+Environment
+  Summary -> Benchmark was executed with attached debugger
+
+// * Legends *
+  Mean        : Arithmetic mean of all measurements
+  Error       : Half of 99.9% confidence interval
+  StdDev      : Standard deviation of all measurements
+  Ratio       : Mean of the ratio distribution ([Current]/[Baseline])
+  Rank        : Relative position of current benchmark mean among all benchmarks (Arabic style)
+  Gen0        : GC Generation 0 collects per 1000 operations
+  Gen1        : GC Generation 1 collects per 1000 operations
+  Gen2        : GC Generation 2 collects per 1000 operations
+  Allocated   : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  Alloc Ratio : Allocated memory ratio distribution ([Current]/[Baseline])
+  1 ms        : 1 Millisecond (0.001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:12 (12.69 sec), executed benchmarks: 1
+
+Global total time: 00:00:16 (16.17 sec), executed benchmarks: 1
+// * Artifacts cleanup *
+Artifacts cleanup is finished

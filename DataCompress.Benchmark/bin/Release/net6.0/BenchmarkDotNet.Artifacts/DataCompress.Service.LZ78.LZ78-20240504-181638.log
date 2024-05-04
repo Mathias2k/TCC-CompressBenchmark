@@ -1,0 +1,140 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 1 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\dddd\source\repos\TCC-CompressBenchmark\DataCompress.Benchmark\bin\Release\net6.0\5d73f3fb-d15b-43e3-bc52-b947dc7c7406
+// command took 1.19 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\dddd\source\repos\TCC-CompressBenchmark\DataCompress.Benchmark\bin\Release\net6.0\5d73f3fb-d15b-43e3-bc52-b947dc7c7406
+// command took 2.21 sec and exited with 0
+// ***** Done, took 00:00:03 (3.45 sec)   *****
+// Found 1 benchmarks:
+//   LZ78.CompressLz78: DefaultJob
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto desempenho)
+// **************************
+// Benchmark: LZ78.CompressLz78: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 5d73f3fb-d15b-43e3-bc52-b947dc7c7406.dll --anonymousPipes 2468 2064 --benchmarkName DataCompress.Service.LZ78.LZ78.CompressLz78 --job Default --benchmarkId 0 in C:\Users\dddd\source\repos\TCC-CompressBenchmark\DataCompress.Benchmark\bin\Release\net6.0\5d73f3fb-d15b-43e3-bc52-b947dc7c7406\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.8
+// Runtime=.NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 311400.00 ns, 311.4000 us/op
+tamanho original do arquivo: 2 Mb
+WorkloadJitting  1: 1 op, 1644048200.00 ns, 1.6440 s/op
+
+OverheadJitting  2: 1 op, 400.00 ns, 400.0000 ns/op
+tamanho original do arquivo: 2 Mb
+WorkloadJitting  2: 1 op, 519502200.00 ns, 519.5022 ms/op
+
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   1: 1 op, 474737600.00 ns, 474.7376 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   2: 1 op, 393822400.00 ns, 393.8224 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   3: 1 op, 393096000.00 ns, 393.0960 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   4: 1 op, 367000100.00 ns, 367.0001 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   5: 1 op, 379887100.00 ns, 379.8871 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   6: 1 op, 368399900.00 ns, 368.3999 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   7: 1 op, 389991300.00 ns, 389.9913 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   8: 1 op, 403466200.00 ns, 403.4662 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   9: 1 op, 407563600.00 ns, 407.5636 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup  10: 1 op, 395137200.00 ns, 395.1372 ms/op
+
+// BeforeActualRun
+tamanho original do arquivo: 2 Mb
+WorkloadActual   1: 1 op, 342412800.00 ns, 342.4128 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   2: 1 op, 356140100.00 ns, 356.1401 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   3: 1 op, 356141200.00 ns, 356.1412 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   4: 1 op, 364658100.00 ns, 364.6581 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   5: 1 op, 341612800.00 ns, 341.6128 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   6: 1 op, 337568200.00 ns, 337.5682 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   7: 1 op, 341438000.00 ns, 341.4380 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   8: 1 op, 341156400.00 ns, 341.1564 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   9: 1 op, 365454400.00 ns, 365.4544 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  10: 1 op, 340986500.00 ns, 340.9865 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  11: 1 op, 354473000.00 ns, 354.4730 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  12: 1 op, 351911800.00 ns, 351.9118 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  13: 1 op, 373406100.00 ns, 373.4061 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  14: 1 op, 400831600.00 ns, 400.8316 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  15: 1 op, 429240200.00 ns, 429.2402 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  16: 1 op, 408160500.00 ns, 408.1605 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  17: 1 op, 359387100.00 ns, 359.3871 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  18: 1 op, 340725200.00 ns, 340.7252 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  19: 1 op, 354222400.00 ns, 354.2224 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  20: 1 op, 339158600.00 ns, 339.1586 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  21: 1 op, 339936600.00 ns, 339.9366 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  22: 1 op, 362502100.00 ns, 362.5021 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  23: 1 op, 334666500.00 ns, 334.6665 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  24: 1 op, 359311600.00 ns, 359.3116 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  25: 1 op, 333120700.00 ns, 333.1207 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  26: 1 op, 333844600.00 ns, 333.8446 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  27: 1 op, 332966900.00 ns, 332.9669 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  28: 1 op, 331763700.00 ns, 331.7637 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  29: 1 op, 334586400.00 ns, 334.5864 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  30: 1 op, 337921000.00 ns, 337.9210 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  31: 1 op, 331601200.00 ns, 331.6012 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  32: 1 op, 330439600.00 ns, 330.4396 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  33: 1 op, 358717400.00 ns, 358.7174 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  34: 1 op, 345332300.00 ns, 345.3323 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  35: 1 op, 333266200.00 ns, 333.2662 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  36: 1 op, 339106500.00 ns, 339.1065 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  37: 1 op, 332374900.00 ns, 332.3749 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  38: 1 op, 337377100.00 ns, 337.3771 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  39: 1 op, 339345400.00 ns, 339.3454 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  40: 1 op, 341297700.00 ns, 341.2977 ms/op
+
+// AfterActualRun
+tamanho original do arquivo: 2 Mb

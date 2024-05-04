@@ -1,4 +1,4 @@
 ﻿using BenchmarkDotNet.Running;
+using DataCompress.Benchmark;
 
-BenchmarkRunner.Run<DataCompress.Benchmark.Huffman.HuffmanTree>();
-BenchmarkRunner.Run<DataCompress.Benchmark.LZ78.LZ78>();
+BenchmarkRunner.Run<BenchMarkService>();

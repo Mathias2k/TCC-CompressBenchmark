@@ -1,0 +1,541 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 4 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\dddd\source\repos\TCC-CompressBenchmark\DataCompress.Benchmark\bin\Release\net6.0\ad65021f-c9b4-484f-ad42-836ffce81f75
+// command took 1.29 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\dddd\source\repos\TCC-CompressBenchmark\DataCompress.Benchmark\bin\Release\net6.0\ad65021f-c9b4-484f-ad42-836ffce81f75
+// command took 13.94 sec and exited with 1
+// start dotnet  build -c Release --no-restore --no-dependencies /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\dddd\source\repos\TCC-CompressBenchmark\DataCompress.Benchmark\bin\Release\net6.0\ad65021f-c9b4-484f-ad42-836ffce81f75
+// command took 2.13 sec and exited with 0
+// ***** Done, took 00:00:17 (17.56 sec)   *****
+// Found 4 benchmarks:
+//   BenchMarkService.LZ78_Ebook_2Mb: DefaultJob
+//   BenchMarkService.LZ78_Random_Text_File_100mb: DefaultJob
+//   BenchMarkService.Huffman_Ebook_2Mb: DefaultJob
+//   BenchMarkService.Huffman_Random_Text_File_100mb: DefaultJob
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto desempenho)
+// **************************
+// Benchmark: BenchMarkService.LZ78_Ebook_2Mb: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ad65021f-c9b4-484f-ad42-836ffce81f75.dll --anonymousPipes 1876 2012 --benchmarkName DataCompress.Benchmark.BenchMarkService.LZ78_Ebook_2Mb --job Default --benchmarkId 0 in C:\Users\dddd\source\repos\TCC-CompressBenchmark\DataCompress.Benchmark\bin\Release\net6.0\ad65021f-c9b4-484f-ad42-836ffce81f75\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.8
+// Runtime=.NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 177400.00 ns, 177.4000 us/op
+tamanho original do arquivo: 2 Mb
+WorkloadJitting  1: 1 op, 1554938600.00 ns, 1.5549 s/op
+
+OverheadJitting  2: 1 op, 400.00 ns, 400.0000 ns/op
+tamanho original do arquivo: 2 Mb
+WorkloadJitting  2: 1 op, 485288000.00 ns, 485.2880 ms/op
+
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   1: 1 op, 395920800.00 ns, 395.9208 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   2: 1 op, 336329900.00 ns, 336.3299 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   3: 1 op, 335451500.00 ns, 335.4515 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   4: 1 op, 335523100.00 ns, 335.5231 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   5: 1 op, 333324000.00 ns, 333.3240 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   6: 1 op, 334396300.00 ns, 334.3963 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   7: 1 op, 334256200.00 ns, 334.2562 ms/op
+
+// BeforeActualRun
+tamanho original do arquivo: 2 Mb
+WorkloadActual   1: 1 op, 332545700.00 ns, 332.5457 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   2: 1 op, 334975700.00 ns, 334.9757 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   3: 1 op, 337101700.00 ns, 337.1017 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   4: 1 op, 340999900.00 ns, 340.9999 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   5: 1 op, 344127600.00 ns, 344.1276 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   6: 1 op, 335900800.00 ns, 335.9008 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   7: 1 op, 338590900.00 ns, 338.5909 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   8: 1 op, 352927800.00 ns, 352.9278 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual   9: 1 op, 337896700.00 ns, 337.8967 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  10: 1 op, 344528600.00 ns, 344.5286 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  11: 1 op, 369191200.00 ns, 369.1912 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  12: 1 op, 344626700.00 ns, 344.6267 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  13: 1 op, 342732100.00 ns, 342.7321 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  14: 1 op, 352100600.00 ns, 352.1006 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  15: 1 op, 347074500.00 ns, 347.0745 ms/op
+tamanho original do arquivo: 2 Mb
+WorkloadActual  16: 1 op, 338286800.00 ns, 338.2868 ms/op
+
+// AfterActualRun
+tamanho original do arquivo: 2 Mb
+WorkloadResult   1: 1 op, 332545700.00 ns, 332.5457 ms/op
+WorkloadResult   2: 1 op, 334975700.00 ns, 334.9757 ms/op
+WorkloadResult   3: 1 op, 337101700.00 ns, 337.1017 ms/op
+WorkloadResult   4: 1 op, 340999900.00 ns, 340.9999 ms/op
+WorkloadResult   5: 1 op, 344127600.00 ns, 344.1276 ms/op
+WorkloadResult   6: 1 op, 335900800.00 ns, 335.9008 ms/op
+WorkloadResult   7: 1 op, 338590900.00 ns, 338.5909 ms/op
+WorkloadResult   8: 1 op, 352927800.00 ns, 352.9278 ms/op
+WorkloadResult   9: 1 op, 337896700.00 ns, 337.8967 ms/op
+WorkloadResult  10: 1 op, 344528600.00 ns, 344.5286 ms/op
+WorkloadResult  11: 1 op, 344626700.00 ns, 344.6267 ms/op
+WorkloadResult  12: 1 op, 342732100.00 ns, 342.7321 ms/op
+WorkloadResult  13: 1 op, 352100600.00 ns, 352.1006 ms/op
+WorkloadResult  14: 1 op, 347074500.00 ns, 347.0745 ms/op
+WorkloadResult  15: 1 op, 338286800.00 ns, 338.2868 ms/op
+// GC:  25 2 1 425225912 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 37548 has exited with code 0.
+
+Mean = 341.628 ms, StdErr = 1.553 ms (0.45%), N = 15, StdDev = 6.016 ms
+Min = 332.546 ms, Q1 = 337.499 ms, Median = 341.000 ms, Q3 = 344.578 ms, Max = 352.928 ms
+IQR = 7.078 ms, LowerFence = 326.882 ms, UpperFence = 355.195 ms
+ConfidenceInterval = [335.197 ms; 348.059 ms] (CI 99.9%), Margin = 6.431 ms (1.88% of Mean)
+Skewness = 0.42, Kurtosis = 2.04, MValue = 2
+
+// ** Remained 3 (75,0%) benchmark(s) to run. Estimated finish 2024-05-04 19:38 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto desempenho)
+// **************************
+// Benchmark: BenchMarkService.LZ78_Random_Text_File_100mb: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ad65021f-c9b4-484f-ad42-836ffce81f75.dll --anonymousPipes 2004 2012 --benchmarkName DataCompress.Benchmark.BenchMarkService.LZ78_Random_Text_File_100mb --job Default --benchmarkId 1 in C:\Users\dddd\source\repos\TCC-CompressBenchmark\DataCompress.Benchmark\bin\Release\net6.0\ad65021f-c9b4-484f-ad42-836ffce81f75\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.8
+// Runtime=.NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 170400.00 ns, 170.4000 us/op
+tamanho original do arquivo: 102 Mb
+WorkloadJitting  1: 1 op, 71562768900.00 ns, 71.5628 s/op
+
+tamanho original do arquivo: 102 Mb
+WorkloadWarmup   1: 1 op, 70777587900.00 ns, 70.7776 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadWarmup   2: 1 op, 72088537400.00 ns, 72.0885 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadWarmup   3: 1 op, 71303570900.00 ns, 71.3036 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadWarmup   4: 1 op, 71252519700.00 ns, 71.2525 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadWarmup   5: 1 op, 72290438500.00 ns, 72.2904 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadWarmup   6: 1 op, 70760678000.00 ns, 70.7607 s/op
+
+// BeforeActualRun
+tamanho original do arquivo: 102 Mb
+WorkloadActual   1: 1 op, 71829430100.00 ns, 71.8294 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual   2: 1 op, 71321223400.00 ns, 71.3212 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual   3: 1 op, 71241345300.00 ns, 71.2413 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual   4: 1 op, 71012084600.00 ns, 71.0121 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual   5: 1 op, 71950938300.00 ns, 71.9509 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual   6: 1 op, 72476988200.00 ns, 72.4770 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual   7: 1 op, 72298369900.00 ns, 72.2984 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual   8: 1 op, 71576249100.00 ns, 71.5762 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual   9: 1 op, 71413797500.00 ns, 71.4138 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual  10: 1 op, 72265442100.00 ns, 72.2654 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual  11: 1 op, 71963892900.00 ns, 71.9639 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual  12: 1 op, 72138477400.00 ns, 72.1385 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual  13: 1 op, 72432592700.00 ns, 72.4326 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual  14: 1 op, 71920718000.00 ns, 71.9207 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual  15: 1 op, 78197686500.00 ns, 78.1977 s/op
+
+// AfterActualRun
+tamanho original do arquivo: 102 Mb
+WorkloadResult   1: 1 op, 71829430100.00 ns, 71.8294 s/op
+WorkloadResult   2: 1 op, 71321223400.00 ns, 71.3212 s/op
+WorkloadResult   3: 1 op, 71241345300.00 ns, 71.2413 s/op
+WorkloadResult   4: 1 op, 71012084600.00 ns, 71.0121 s/op
+WorkloadResult   5: 1 op, 71950938300.00 ns, 71.9509 s/op
+WorkloadResult   6: 1 op, 72476988200.00 ns, 72.4770 s/op
+WorkloadResult   7: 1 op, 72298369900.00 ns, 72.2984 s/op
+WorkloadResult   8: 1 op, 71576249100.00 ns, 71.5762 s/op
+WorkloadResult   9: 1 op, 71413797500.00 ns, 71.4138 s/op
+WorkloadResult  10: 1 op, 72265442100.00 ns, 72.2654 s/op
+WorkloadResult  11: 1 op, 71963892900.00 ns, 71.9639 s/op
+WorkloadResult  12: 1 op, 72138477400.00 ns, 72.1385 s/op
+WorkloadResult  13: 1 op, 72432592700.00 ns, 72.4326 s/op
+WorkloadResult  14: 1 op, 71920718000.00 ns, 71.9207 s/op
+// GC:  3628 392 16 62552793056 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 37368 has exited with code 0.
+
+Mean = 71.846 s, StdErr = 0.125 s (0.17%), N = 14, StdDev = 0.467 s
+Min = 71.012 s, Q1 = 71.454 s, Median = 71.936 s, Q3 = 72.234 s, Max = 72.477 s
+IQR = 0.779 s, LowerFence = 70.285 s, UpperFence = 73.403 s
+ConfidenceInterval = [71.319 s; 72.373 s] (CI 99.9%), Margin = 0.527 s (0.73% of Mean)
+Skewness = -0.28, Kurtosis = 1.64, MValue = 2
+
+// ** Remained 2 (50,0%) benchmark(s) to run. Estimated finish 2024-05-04 20:33 (0h 27m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto desempenho)
+// **************************
+// Benchmark: BenchMarkService.Huffman_Ebook_2Mb: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ad65021f-c9b4-484f-ad42-836ffce81f75.dll --anonymousPipes 2176 2180 --benchmarkName DataCompress.Benchmark.BenchMarkService.Huffman_Ebook_2Mb --job Default --benchmarkId 2 in C:\Users\dddd\source\repos\TCC-CompressBenchmark\DataCompress.Benchmark\bin\Release\net6.0\ad65021f-c9b4-484f-ad42-836ffce81f75\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.8
+// Runtime=.NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 167400.00 ns, 167.4000 us/op
+tamanho original do arquivo: 2 Mb
+WorkloadJitting  1: 1 op, 657456000.00 ns, 657.4560 ms/op
+
+OverheadJitting  2: 1 op, 300.00 ns, 300.0000 ns/op
+tamanho original do arquivo: 2 Mb
+WorkloadJitting  2: 1 op, 307768400.00 ns, 307.7684 ms/op
+
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadPilot    1: 2 op, 600063300.00 ns, 300.0317 ms/op
+
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   1: 2 op, 580749500.00 ns, 290.3748 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   2: 2 op, 572588300.00 ns, 286.2942 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   3: 2 op, 577567300.00 ns, 288.7837 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   4: 2 op, 573454200.00 ns, 286.7271 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   5: 2 op, 572987600.00 ns, 286.4938 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   6: 2 op, 569817600.00 ns, 284.9088 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   7: 2 op, 603132600.00 ns, 301.5663 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadWarmup   8: 2 op, 576387000.00 ns, 288.1935 ms/op
+
+// BeforeActualRun
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadActual   1: 2 op, 568755900.00 ns, 284.3779 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadActual   2: 2 op, 574514200.00 ns, 287.2571 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadActual   3: 2 op, 570230400.00 ns, 285.1152 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadActual   4: 2 op, 564572200.00 ns, 282.2861 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadActual   5: 2 op, 572935400.00 ns, 286.4677 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadActual   6: 2 op, 569877900.00 ns, 284.9389 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadActual   7: 2 op, 572048900.00 ns, 286.0245 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadActual   8: 2 op, 563858500.00 ns, 281.9293 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadActual   9: 2 op, 565531600.00 ns, 282.7658 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadActual  10: 2 op, 571463500.00 ns, 285.7317 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadActual  11: 2 op, 565759900.00 ns, 282.8800 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadActual  12: 2 op, 576012400.00 ns, 288.0062 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadActual  13: 2 op, 574085000.00 ns, 287.0425 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadActual  14: 2 op, 565967000.00 ns, 282.9835 ms/op
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadActual  15: 2 op, 577793400.00 ns, 288.8967 ms/op
+
+// AfterActualRun
+tamanho original do arquivo: 2 Mb
+tamanho original do arquivo: 2 Mb
+WorkloadResult   1: 2 op, 568755900.00 ns, 284.3779 ms/op
+WorkloadResult   2: 2 op, 574514200.00 ns, 287.2571 ms/op
+WorkloadResult   3: 2 op, 570230400.00 ns, 285.1152 ms/op
+WorkloadResult   4: 2 op, 564572200.00 ns, 282.2861 ms/op
+WorkloadResult   5: 2 op, 572935400.00 ns, 286.4677 ms/op
+WorkloadResult   6: 2 op, 569877900.00 ns, 284.9389 ms/op
+WorkloadResult   7: 2 op, 572048900.00 ns, 286.0245 ms/op
+WorkloadResult   8: 2 op, 563858500.00 ns, 281.9293 ms/op
+WorkloadResult   9: 2 op, 565531600.00 ns, 282.7658 ms/op
+WorkloadResult  10: 2 op, 571463500.00 ns, 285.7317 ms/op
+WorkloadResult  11: 2 op, 565759900.00 ns, 282.8800 ms/op
+WorkloadResult  12: 2 op, 576012400.00 ns, 288.0062 ms/op
+WorkloadResult  13: 2 op, 574085000.00 ns, 287.0425 ms/op
+WorkloadResult  14: 2 op, 565967000.00 ns, 282.9835 ms/op
+WorkloadResult  15: 2 op, 577793400.00 ns, 288.8967 ms/op
+// GC:  45 5 1 772226416 2
+// Threading:  0 0 2
+
+// AfterAll
+// Benchmark Process 37980 has exited with code 0.
+
+Mean = 285.114 ms, StdErr = 0.568 ms (0.20%), N = 15, StdDev = 2.200 ms
+Min = 281.929 ms, Q1 = 282.932 ms, Median = 285.115 ms, Q3 = 286.755 ms, Max = 288.897 ms
+IQR = 3.823 ms, LowerFence = 277.197 ms, UpperFence = 292.490 ms
+ConfidenceInterval = [282.761 ms; 287.466 ms] (CI 99.9%), Margin = 2.352 ms (0.83% of Mean)
+Skewness = 0.06, Kurtosis = 1.58, MValue = 2
+
+// ** Remained 1 (25,0%) benchmark(s) to run. Estimated finish 2024-05-04 20:15 (0h 9m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto desempenho)
+// **************************
+// Benchmark: BenchMarkService.Huffman_Random_Text_File_100mb: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ad65021f-c9b4-484f-ad42-836ffce81f75.dll --anonymousPipes 1600 1608 --benchmarkName DataCompress.Benchmark.BenchMarkService.Huffman_Random_Text_File_100mb --job Default --benchmarkId 3 in C:\Users\dddd\source\repos\TCC-CompressBenchmark\DataCompress.Benchmark\bin\Release\net6.0\ad65021f-c9b4-484f-ad42-836ffce81f75\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.8
+// Runtime=.NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 175300.00 ns, 175.3000 us/op
+tamanho original do arquivo: 102 Mb
+WorkloadJitting  1: 1 op, 42214490700.00 ns, 42.2145 s/op
+
+tamanho original do arquivo: 102 Mb
+WorkloadWarmup   1: 1 op, 38446597400.00 ns, 38.4466 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadWarmup   2: 1 op, 38402674200.00 ns, 38.4027 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadWarmup   3: 1 op, 39804162900.00 ns, 39.8042 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadWarmup   4: 1 op, 38750487400.00 ns, 38.7505 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadWarmup   5: 1 op, 38322433700.00 ns, 38.3224 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadWarmup   6: 1 op, 38506787700.00 ns, 38.5068 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadWarmup   7: 1 op, 38532573900.00 ns, 38.5326 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadWarmup   8: 1 op, 38036846200.00 ns, 38.0368 s/op
+
+// BeforeActualRun
+tamanho original do arquivo: 102 Mb
+WorkloadActual   1: 1 op, 38808949900.00 ns, 38.8089 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual   2: 1 op, 38533173300.00 ns, 38.5332 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual   3: 1 op, 37685551500.00 ns, 37.6856 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual   4: 1 op, 37753028100.00 ns, 37.7530 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual   5: 1 op, 37693792500.00 ns, 37.6938 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual   6: 1 op, 37538913700.00 ns, 37.5389 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual   7: 1 op, 37979872600.00 ns, 37.9799 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual   8: 1 op, 38016574200.00 ns, 38.0166 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual   9: 1 op, 37704955300.00 ns, 37.7050 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual  10: 1 op, 39158868200.00 ns, 39.1589 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual  11: 1 op, 37934465600.00 ns, 37.9345 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual  12: 1 op, 37271444700.00 ns, 37.2714 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual  13: 1 op, 37380043300.00 ns, 37.3800 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual  14: 1 op, 38681185000.00 ns, 38.6812 s/op
+tamanho original do arquivo: 102 Mb
+WorkloadActual  15: 1 op, 40727135300.00 ns, 40.7271 s/op
+
+// AfterActualRun
+tamanho original do arquivo: 102 Mb
+WorkloadResult   1: 1 op, 38808949900.00 ns, 38.8089 s/op
+WorkloadResult   2: 1 op, 38533173300.00 ns, 38.5332 s/op
+WorkloadResult   3: 1 op, 37685551500.00 ns, 37.6856 s/op
+WorkloadResult   4: 1 op, 37753028100.00 ns, 37.7530 s/op
+WorkloadResult   5: 1 op, 37693792500.00 ns, 37.6938 s/op
+WorkloadResult   6: 1 op, 37538913700.00 ns, 37.5389 s/op
+WorkloadResult   7: 1 op, 37979872600.00 ns, 37.9799 s/op
+WorkloadResult   8: 1 op, 38016574200.00 ns, 38.0166 s/op
+WorkloadResult   9: 1 op, 37704955300.00 ns, 37.7050 s/op
+WorkloadResult  10: 1 op, 39158868200.00 ns, 39.1589 s/op
+WorkloadResult  11: 1 op, 37934465600.00 ns, 37.9345 s/op
+WorkloadResult  12: 1 op, 37271444700.00 ns, 37.2714 s/op
+WorkloadResult  13: 1 op, 37380043300.00 ns, 37.3800 s/op
+WorkloadResult  14: 1 op, 38681185000.00 ns, 38.6812 s/op
+// GC:  3263 221 8 55192884176 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 39924 has exited with code 0.
+
+Mean = 38.010 s, StdErr = 0.152 s (0.40%), N = 14, StdDev = 0.570 s
+Min = 37.271 s, Q1 = 37.688 s, Median = 37.844 s, Q3 = 38.404 s, Max = 39.159 s
+IQR = 0.716 s, LowerFence = 36.613 s, UpperFence = 39.479 s
+ConfidenceInterval = [37.368 s; 38.653 s] (CI 99.9%), Margin = 0.643 s (1.69% of Mean)
+Skewness = 0.62, Kurtosis = 2.01, MValue = 2
+
+// ** Remained 0 (0,0%) benchmark(s) to run. Estimated finish 2024-05-04 20:22 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto desempenho)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\DataCompress.Benchmark.BenchMarkService-report.csv
+  BenchmarkDotNet.Artifacts\results\DataCompress.Benchmark.BenchMarkService-report-github.md
+  BenchmarkDotNet.Artifacts\results\DataCompress.Benchmark.BenchMarkService-report.html
+
+// * Detailed results *
+BenchMarkService.Huffman_Ebook_2Mb: DefaultJob
+Runtime = .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 285.114 ms, StdErr = 0.568 ms (0.20%), N = 15, StdDev = 2.200 ms
+Min = 281.929 ms, Q1 = 282.932 ms, Median = 285.115 ms, Q3 = 286.755 ms, Max = 288.897 ms
+IQR = 3.823 ms, LowerFence = 277.197 ms, UpperFence = 292.490 ms
+ConfidenceInterval = [282.761 ms; 287.466 ms] (CI 99.9%), Margin = 2.352 ms (0.83% of Mean)
+Skewness = 0.06, Kurtosis = 1.58, MValue = 2
+-------------------- Histogram --------------------
+[280.758 ms ; 288.959 ms) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+BenchMarkService.LZ78_Ebook_2Mb: DefaultJob
+Runtime = .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 341.628 ms, StdErr = 1.553 ms (0.45%), N = 15, StdDev = 6.016 ms
+Min = 332.546 ms, Q1 = 337.499 ms, Median = 341.000 ms, Q3 = 344.578 ms, Max = 352.928 ms
+IQR = 7.078 ms, LowerFence = 326.882 ms, UpperFence = 355.195 ms
+ConfidenceInterval = [335.197 ms; 348.059 ms] (CI 99.9%), Margin = 6.431 ms (1.88% of Mean)
+Skewness = 0.42, Kurtosis = 2.04, MValue = 2
+-------------------- Histogram --------------------
+[329.344 ms ; 341.368 ms) | @@@@@@@@
+[341.368 ms ; 348.352 ms) | @@@@@
+[348.352 ms ; 356.129 ms) | @@
+---------------------------------------------------
+
+BenchMarkService.Huffman_Random_Text_File_100mb: DefaultJob
+Runtime = .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 38.010 s, StdErr = 0.152 s (0.40%), N = 14, StdDev = 0.570 s
+Min = 37.271 s, Q1 = 37.688 s, Median = 37.844 s, Q3 = 38.404 s, Max = 39.159 s
+IQR = 0.716 s, LowerFence = 36.613 s, UpperFence = 39.479 s
+ConfidenceInterval = [37.368 s; 38.653 s] (CI 99.9%), Margin = 0.643 s (1.69% of Mean)
+Skewness = 0.62, Kurtosis = 2.01, MValue = 2
+-------------------- Histogram --------------------
+[36.961 s ; 38.156 s) | @@@@@@@@@@
+[38.156 s ; 39.469 s) | @@@@
+---------------------------------------------------
+
+BenchMarkService.LZ78_Random_Text_File_100mb: DefaultJob
+Runtime = .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 71.846 s, StdErr = 0.125 s (0.17%), N = 14, StdDev = 0.467 s
+Min = 71.012 s, Q1 = 71.454 s, Median = 71.936 s, Q3 = 72.234 s, Max = 72.477 s
+IQR = 0.779 s, LowerFence = 70.285 s, UpperFence = 73.403 s
+ConfidenceInterval = [71.319 s; 72.373 s] (CI 99.9%), Margin = 0.527 s (0.73% of Mean)
+Skewness = -0.28, Kurtosis = 1.64, MValue = 2
+-------------------- Histogram --------------------
+[70.758 s ; 72.731 s) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.13.8, Windows 10 (10.0.19045.4291/22H2/2022Update)
+AMD Ryzen 5 5600, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 6.0.402
+  [Host]     : .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2 [AttachedDebugger]
+  DefaultJob : .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2
+
+
+| Method                         | Mean        | Error     | StdDev    | Rank | Gen0         | Gen1        | Gen2       | Allocated   |
+|------------------------------- |------------:|----------:|----------:|-----:|-------------:|------------:|-----------:|------------:|
+| Huffman_Ebook_2Mb              |    285.1 ms |   2.35 ms |   2.20 ms |    1 |   22500.0000 |   2500.0000 |   500.0000 |   368.23 MB |
+| LZ78_Ebook_2Mb                 |    341.6 ms |   6.43 ms |   6.02 ms |    2 |   25000.0000 |   2000.0000 |  1000.0000 |   405.53 MB |
+| Huffman_Random_Text_File_100mb | 38,010.1 ms | 642.54 ms | 569.59 ms |    3 | 3263000.0000 | 221000.0000 |  8000.0000 | 52636.04 MB |
+| LZ78_Random_Text_File_100mb    | 71,845.8 ms | 526.80 ms | 466.99 ms |    4 | 3628000.0000 | 392000.0000 | 16000.0000 | 59654.99 MB |
+
+// * Warnings *
+Environment
+  Summary -> Benchmark was executed with attached debugger
+
+// * Hints *
+Outliers
+  BenchMarkService.LZ78_Ebook_2Mb: Default                 -> 1 outlier  was  removed (369.19 ms)
+  BenchMarkService.Huffman_Random_Text_File_100mb: Default -> 1 outlier  was  removed (40.73 s)
+  BenchMarkService.LZ78_Random_Text_File_100mb: Default    -> 1 outlier  was  removed (78.20 s)
+
+// * Legends *
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  Rank      : Relative position of current benchmark mean among all benchmarks (Arabic style)
+  Gen0      : GC Generation 0 collects per 1000 operations
+  Gen1      : GC Generation 1 collects per 1000 operations
+  Gen2      : GC Generation 2 collects per 1000 operations
+  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 ms      : 1 Millisecond (0.001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:44:12 (2652.38 sec), executed benchmarks: 4
+
+Global total time: 00:44:30 (2670.6 sec), executed benchmarks: 4
+// * Artifacts cleanup *
+Artifacts cleanup is finished

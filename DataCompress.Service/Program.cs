@@ -1,26 +1,45 @@
-﻿using DataCompress.Service.PDF;
+﻿using DataCompress.Service.Huffman;
+using DataCompress.Service.LZ78;
 using DataCompress.Service.PDF;
 using MongoDB.Bson;
 using MongoDB.Driver;
-class Program
+using System.Diagnostics;
+using System.Text;
+using static DataCompress.Service.Huffman.Huffman;
+
+static class Program
 {
     public static void Main()
     {
-        string inputFile = @"C:\\Users\\dddd\\Desktop\\104The Pragmatic Programmer, From Journeyman To Master - Andrew Hunt, David Thomas - Addison Wesley - 1999.pdf"; // Caminho do arquivo PDF a ser lido
-        string texto = PDFService.LerPDF(inputFile);
+        double compressedSizeInMB = 0;
 
-        List<Tuple<int, char>> compressed = DataCompress.Service.LZ78.LZ78.LZ78Compress(texto);
-        Console.WriteLine("Compressed by LZ78:");
-        Console.WriteLine($"InputLength: {texto.Length} - CompressedLenght: {compressed.Count}\n");
-        //Console.WriteLine("Compressed:");
-        //foreach (var tuple in compressed)
-        //    Console.WriteLine($"<{tuple.Item1}, {tuple.Item2}>");
+        PDFService.GerarPDF();
 
-        Console.WriteLine("\n");
+        //string inputFile = @"C:\\Users\\dddd\\Desktop\\104The Pragmatic Programmer, From Journeyman To Master - Andrew Hunt, David Thomas - Addison Wesley - 1999.pdf"; // Caminho do arquivo PDF a ser lido
+        string inputFile = @"C:\\Users\\dddd\\Desktop\\large_random_text_file.pdf";
 
-        string compressed2 = DataCompress.Service.Huffman.HuffmanTree.HuffmanCompress(texto);
-        Console.WriteLine("Compressed by Huffman:");
-        Console.WriteLine($"InputLength: {texto.Length} - CompressedLenght: {compressed2.Length}\n");
+        //string rawText = PDFService.LerPDF(inputFile);
+
+        //Console.WriteLine("\n");
+
+        //Console.WriteLine("Compressão com o Algoritmo LZ78:");
+        //Stopwatch stopwatch1 = Stopwatch.StartNew();
+        //List<Tuple<int, char>> compressedLz78 = new LZ78().CompressLz78(rawText);
+        //stopwatch1.Stop();
+        //Console.WriteLine($"Tempo decorrido para compressão: {stopwatch1.ElapsedMilliseconds} Ms");
+        //compressedSizeInMB = LZ78.GetCompressedSize(compressedLz78);
+        //Console.WriteLine($"Tamanho da mensagem comprimida  {Math.Round(compressedSizeInMB, 2)} Mb");
+
+        //Console.WriteLine("\n");
+
+        //Console.WriteLine("Compressão com o Algoritmo Huffman:");
+        //Stopwatch stopwatch2 = Stopwatch.StartNew();
+        //Dictionary<char, string> encodingMap = new Huffman().CompressHuffman(rawText);
+        //stopwatch2.Stop();
+        //Console.WriteLine($"Tempo decorrido para compressão: {stopwatch2.ElapsedMilliseconds} Ms");
+        //string compressedHuffman = string.Join("", rawText.Select(c => encodingMap[c]));
+        //compressedSizeInMB = GetCompressedSize(compressedHuffman);
+        //Console.WriteLine($"Tamanho da mensagem comprimida {Math.Round(compressedSizeInMB, 2)} Mb");
 
         //PDFService.ComprimirPDF(inputFile, "C:\\Users\\dddd\\Desktop\\Teste.pdf");
     }

@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="PDF\" />
+    <ProjectReference Include="..\DataCompress.Service\DataCompress.Service.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>DataCompress.Benchmark.BenchMarkService-20240504-193752</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.8, Windows 10 (10.0.19045.4291/22H2/2022Update)
+AMD Ryzen 5 5600, 1 CPU, 12 logical and 6 physical cores
+.NET SDK 6.0.402
+  [Host]     : .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2 [AttachedDebugger]
+  DefaultJob : .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method                  </th><th>Mean </th><th>Error</th><th>StdDev</th><th>Rank</th><th>Gen0  </th><th>Gen1 </th><th>Gen2</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Huffman_Ebook_2Mb</td><td>285.1 ms</td><td>2.35 ms</td><td>2.20 ms</td><td>1</td><td>22500.0000</td><td>2500.0000</td><td>500.0000</td><td>368.23 MB</td>
+</tr><tr><td>LZ78_Ebook_2Mb</td><td>341.6 ms</td><td>6.43 ms</td><td>6.02 ms</td><td>2</td><td>25000.0000</td><td>2000.0000</td><td>1000.0000</td><td>405.53 MB</td>
+</tr><tr><td>Huffman_Random_Text_File_100mb</td><td>38,010.1 ms</td><td>642.54 ms</td><td>569.59 ms</td><td>3</td><td>3263000.0000</td><td>221000.0000</td><td>8000.0000</td><td>52636.04 MB</td>
+</tr><tr><td>LZ78_Random_Text_File_100mb</td><td>71,845.8 ms</td><td>526.80 ms</td><td>466.99 ms</td><td>4</td><td>3628000.0000</td><td>392000.0000</td><td>16000.0000</td><td>59654.99 MB</td>
+</tr></tbody></table>
+</body>
+</html>
