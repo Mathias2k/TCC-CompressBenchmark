@@ -9,41 +9,130 @@ using static DataCompress.Service.Huffman.Huffman;
 
 static class Program
 {
+    static double compressedSizeInMB = 0;
     public static void Main()
     {
-        double compressedSizeInMB = 0;
+        //PDFService.GerarPDF();
 
-        PDFService.GerarPDF();
+        string rawTextEbook = RawTextEbook2Mb();
+        string rawTextRandomText25Mb = RawTextRandomText25Mb();
+        string rawTextRepetitive50Mb = RawTextRepetitive50Mb();
+        string rawTextRandomText100Mb = RawTextRandomText100Mb();
 
-        //string inputFile = @"C:\\Users\\dddd\\Desktop\\104The Pragmatic Programmer, From Journeyman To Master - Andrew Hunt, David Thomas - Addison Wesley - 1999.pdf"; // Caminho do arquivo PDF a ser lido
-        string inputFile = @"C:\\Users\\dddd\\Desktop\\large_random_text_file.pdf";
+        LZ78_Ebook_2Mb(rawTextEbook);
+        Console.WriteLine("\n");
+        LZ78_Random_Text_File_25mb(rawTextRandomText25Mb);
+        Console.WriteLine("\n");
+        LZ78_Repetitive_Text_File_50mb(rawTextRepetitive50Mb);
+        Console.WriteLine("\n");
+        LZ78_Random_Text_File_100mb(rawTextRandomText100Mb);
 
-        //string rawText = PDFService.LerPDF(inputFile);
+        Console.WriteLine("\n");
+        Console.WriteLine("***************************************************************");
+        Console.WriteLine("\n");
 
-        //Console.WriteLine("\n");
+        Huffman_Ebook_2Mb(rawTextEbook);
+        Console.WriteLine("\n");
+        Huffman_Random_Text_File_25mb(rawTextRandomText25Mb);
+        Console.WriteLine("\n");
+        Huffman_Repetitive_Text_File_50mb(rawTextRepetitive50Mb);
+        Console.WriteLine("\n");
+        Huffman_Random_Text_File_100mb(rawTextRandomText100Mb);
+    }
+    static string RawTextEbook2Mb()
+    {
+        string inputFile = @"C:\\Users\\dddd\\Desktop\\104The Pragmatic Programmer, From Journeyman To Master - Andrew Hunt, David Thomas - Addison Wesley - 1999.pdf";
+        string rawText = PDFService.LerPDF(inputFile);
 
-        //Console.WriteLine("Compressão com o Algoritmo LZ78:");
-        //Stopwatch stopwatch1 = Stopwatch.StartNew();
-        //List<Tuple<int, char>> compressedLz78 = new LZ78().CompressLz78(rawText);
-        //stopwatch1.Stop();
-        //Console.WriteLine($"Tempo decorrido para compressão: {stopwatch1.ElapsedMilliseconds} Ms");
-        //compressedSizeInMB = LZ78.GetCompressedSize(compressedLz78);
-        //Console.WriteLine($"Tamanho da mensagem comprimida  {Math.Round(compressedSizeInMB, 2)} Mb");
+        return rawText;
+    }
+    static string RawTextRandomText25Mb()
+    {
+        string inputFile = @"C:\\Users\\dddd\\Desktop\\random_text_file_25mb.pdf";
+        string rawText = PDFService.LerPDF(inputFile);
 
-        //Console.WriteLine("\n");
+        return rawText;
+    }
+    static string RawTextRepetitive50Mb()
+    {
+        string inputFile = @"C:\\Users\\dddd\\Desktop\\repetitive_text_file_50mb.pdf";
+        string rawText = PDFService.LerPDF(inputFile);
 
-        //Console.WriteLine("Compressão com o Algoritmo Huffman:");
-        //Stopwatch stopwatch2 = Stopwatch.StartNew();
-        //Dictionary<char, string> encodingMap = new Huffman().CompressHuffman(rawText);
-        //stopwatch2.Stop();
-        //Console.WriteLine($"Tempo decorrido para compressão: {stopwatch2.ElapsedMilliseconds} Ms");
-        //string compressedHuffman = string.Join("", rawText.Select(c => encodingMap[c]));
-        //compressedSizeInMB = GetCompressedSize(compressedHuffman);
-        //Console.WriteLine($"Tamanho da mensagem comprimida {Math.Round(compressedSizeInMB, 2)} Mb");
+        return rawText;
+    }
+    static string RawTextRandomText100Mb()
+    {
+        string inputFile = @"C:\\Users\\dddd\\Desktop\\random_text_file_100mb.pdf";
+        string rawText = PDFService.LerPDF(inputFile);
 
-        //PDFService.ComprimirPDF(inputFile, "C:\\Users\\dddd\\Desktop\\Teste.pdf");
+        return rawText;
     }
 
+    #region LZ78
+    static void LZ78_Ebook_2Mb(string rawText)
+    {
+        Console.WriteLine("LZ78_Ebook_2Mb");
+        List<Tuple<int, char>> compressedLz78 = new LZ78().CompressLz78(rawText);
+        compressedSizeInMB = LZ78.GetCompressedSize(compressedLz78);
+        Console.WriteLine($"Tamanho Original: 2Mb - Tamanho da mensagem comprimida  {Math.Round(compressedSizeInMB, 2)} Mb");
+    }
+    static void LZ78_Random_Text_File_25mb(string rawText)
+    {
+        Console.WriteLine("LZ78_Random_Text_File_25mb");
+        List<Tuple<int, char>> compressedLz78 = new LZ78().CompressLz78(rawText);
+        compressedSizeInMB = LZ78.GetCompressedSize(compressedLz78);
+        Console.WriteLine($"Tamanho Original: 25Mb - Tamanho da mensagem comprimida  {Math.Round(compressedSizeInMB, 2)} Mb");
+    }
+    static void LZ78_Repetitive_Text_File_50mb(string rawText)
+    {
+        Console.WriteLine("LZ78_Repetitive_Text_File_50mb");
+        List<Tuple<int, char>> compressedLz78 = new LZ78().CompressLz78(rawText);
+        compressedSizeInMB = LZ78.GetCompressedSize(compressedLz78);
+        Console.WriteLine($"Tamanho Original: 50Mb - Tamanho da mensagem comprimida  {Math.Round(compressedSizeInMB, 2)} Mb");
+    }
+    static void LZ78_Random_Text_File_100mb(string rawText)
+    {
+        Console.WriteLine("LZ78_Random_Text_File_100mb");
+        List<Tuple<int, char>> compressedLz78 = new LZ78().CompressLz78(rawText);
+        compressedSizeInMB = LZ78.GetCompressedSize(compressedLz78);
+        Console.WriteLine($"Tamanho Original: 100Mb - Tamanho da mensagem comprimida  {Math.Round(compressedSizeInMB, 2)} Mb");
+    }
+    #endregion
+
+    #region Huffman
+    static void Huffman_Ebook_2Mb(string rawText)
+    {
+        Console.WriteLine("Huffman_Ebook_2Mb");
+        Dictionary<char, string> encodingMap = new Huffman().CompressHuffman(rawText);
+        string compressedHuffman = string.Join("", rawText.Select(c => encodingMap[c]));
+        compressedSizeInMB = GetCompressedSize(compressedHuffman);
+        Console.WriteLine($"Tamanho Original: 2Mb - Tamanho da mensagem comprimida {Math.Round(compressedSizeInMB, 2)} Mb");
+    }
+    static void Huffman_Random_Text_File_25mb(string rawText)
+    {
+        Console.WriteLine("Huffman_Random_Text_File_25mb");
+        Dictionary<char, string> encodingMap = new Huffman().CompressHuffman(rawText);
+        string compressedHuffman = string.Join("", rawText.Select(c => encodingMap[c]));
+        compressedSizeInMB = GetCompressedSize(compressedHuffman);
+        Console.WriteLine($"Tamanho Original: 25Mb - Tamanho da mensagem comprimida {Math.Round(compressedSizeInMB, 2)} Mb");
+    }
+    static void Huffman_Repetitive_Text_File_50mb(string rawText)
+    {
+        Console.WriteLine("Huffman_Repetitive_Text_File_50mb");
+        Dictionary<char, string> encodingMap = new Huffman().CompressHuffman(rawText);
+        string compressedHuffman = string.Join("", rawText.Select(c => encodingMap[c]));
+        compressedSizeInMB = GetCompressedSize(compressedHuffman);
+        Console.WriteLine($"Tamanho Original: 50Mb - Tamanho da mensagem comprimida {Math.Round(compressedSizeInMB, 2)} Mb");
+    }
+    static void Huffman_Random_Text_File_100mb(string rawText)
+    {
+        Console.WriteLine("Huffman_Random_Text_File_100mb");
+        Dictionary<char, string> encodingMap = new Huffman().CompressHuffman(rawText);
+        string compressedHuffman = string.Join("", rawText.Select(c => encodingMap[c]));
+        compressedSizeInMB = GetCompressedSize(compressedHuffman);
+        Console.WriteLine($"Tamanho Original: 100Mb - Tamanho da mensagem comprimida {Math.Round(compressedSizeInMB, 2)} Mb");
+    }
+    #endregion
 
     //TESTAR COM COMPRESSAO DE ARQUIVOS
     //PARA STRINGS SOLTAS e LOGS NAO COMPENSA

@@ -8,10 +8,8 @@ namespace DataCompress.Service.LZ78
     public class LZ78
     {
         [Benchmark]
-        public List<Tuple<int, char>> CompressLz78(string inputFile)
+        public List<Tuple<int, char>> CompressLz78(string input)
         {
-            string input = PDFService.LerPDF(inputFile);
-
             Dictionary<string, int> dictionary = new();
             List<Tuple<int, char>> compressed = new();
             int nextCode = 1;

@@ -1,6 +1,7 @@
 ﻿using BenchmarkDotNet.Attributes;
 using DataCompress.Service.Huffman;
 using DataCompress.Service.LZ78;
+using DataCompress.Service.PDF;
 
 namespace DataCompress.Benchmark
 {
@@ -14,28 +15,32 @@ namespace DataCompress.Benchmark
         public void LZ78_Ebook_2Mb()
         {
             string inputFile = @"C:\\Users\\dddd\\Desktop\\104The Pragmatic Programmer, From Journeyman To Master - Andrew Hunt, David Thomas - Addison Wesley - 1999.pdf";
-            new LZ78().CompressLz78(inputFile);
+            string rawText = PDFService.LerPDF(inputFile);
+            new LZ78().CompressLz78(rawText);
         }
 
         [Benchmark]
         public void LZ78_Random_Text_File_25mb()
         {
             string inputFile = @"C:\\Users\\dddd\\Desktop\\random_text_file_25mb.pdf";
-            new LZ78().CompressLz78(inputFile);
+            string rawText = PDFService.LerPDF(inputFile);
+            new LZ78().CompressLz78(rawText);
         }
 
         [Benchmark]
         public void LZ78_Repetitive_Text_File_50mb()
         {
-            string inputFile = @"C:\\Users\\dddd\\Desktop\\random_text_file_50mb.pdf";
-            new LZ78().CompressLz78(inputFile);
+            string inputFile = @"C:\\Users\\dddd\\Desktop\\repetitive_text_file_50mb.pdf";
+            string rawText = PDFService.LerPDF(inputFile);
+            new LZ78().CompressLz78(rawText);
         }
 
         [Benchmark]
         public void LZ78_Random_Text_File_100mb()
         {
             string inputFile = @"C:\\Users\\dddd\\Desktop\\random_text_file_100mb.pdf";
-            new LZ78().CompressLz78(inputFile);
+            string rawText = PDFService.LerPDF(inputFile);
+            new LZ78().CompressLz78(rawText);
         }
         #endregion
 
@@ -44,28 +49,32 @@ namespace DataCompress.Benchmark
         public void Huffman_Ebook_2Mb()
         {
             string inputFile = @"C:\\Users\\dddd\\Desktop\\104The Pragmatic Programmer, From Journeyman To Master - Andrew Hunt, David Thomas - Addison Wesley - 1999.pdf";
-            new Huffman().CompressHuffman(inputFile);
-        }
-
-        [Benchmark]
-        public void Huffman_Repetitive_Text_File_50mb()
-        {
-            string inputFile = @"C:\\Users\\dddd\\Desktop\\random_text_file_50mb.pdf";
-            new Huffman().CompressHuffman(inputFile);
+            string rawText = PDFService.LerPDF(inputFile);
+            new Huffman().CompressHuffman(rawText);
         }
 
         [Benchmark]
         public void Huffman_Random_Text_File_25mb()
         {
             string inputFile = @"C:\\Users\\dddd\\Desktop\\random_text_file_25mb.pdf";
-            new Huffman().CompressHuffman(inputFile);
+            string rawText = PDFService.LerPDF(inputFile);
+            new Huffman().CompressHuffman(rawText);
+        }
+
+        [Benchmark]
+        public void Huffman_Repetitive_Text_File_50mb()
+        {
+            string inputFile = @"C:\\Users\\dddd\\Desktop\\repetitive_text_file_50mb.pdf";
+            string rawText = PDFService.LerPDF(inputFile);
+            new Huffman().CompressHuffman(rawText);
         }
 
         [Benchmark]
         public void Huffman_Random_Text_File_100mb()
         {
             string inputFile = @"C:\\Users\\dddd\\Desktop\\random_text_file_100mb.pdf";
-            new Huffman().CompressHuffman(inputFile);
+            string rawText = PDFService.LerPDF(inputFile);
+            new Huffman().CompressHuffman(rawText);
         }
         #endregion
     }

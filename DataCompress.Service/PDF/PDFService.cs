@@ -11,12 +11,16 @@ namespace DataCompress.Service.PDF
         public static string LerPDF(string inputFile)
         {
             using PdfReader reader = new(inputFile);
-            Console.WriteLine($"tamanho original do arquivo: {reader.GetFileLength() / (1024 * 1024)} Mb");
+            //Console.WriteLine($"tamanho original do arquivo: {reader.GetFileLength() / (1024 * 1024)} Mb");
+            //Console.WriteLine("\n");
             using PdfDocument pdfDoc = new(reader);
 
             StringBuilder texto = new();
             for (int pageNum = 1; pageNum <= pdfDoc.GetNumberOfPages(); pageNum++)
                 texto.Append(PdfTextExtractor.GetTextFromPage(pdfDoc.GetPage(pageNum)));
+
+            pdfDoc.Close();
+            reader.Close();
 
             return texto.ToString();
         }

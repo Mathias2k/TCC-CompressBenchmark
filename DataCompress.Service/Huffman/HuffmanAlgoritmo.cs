@@ -9,16 +9,27 @@ namespace DataCompress.Service.Huffman
     public class Huffman
     {
         [Benchmark]
-        public Dictionary<char, string> CompressHuffman(string inputFile)
+        public Dictionary<char, string> CompressHuffman(string input)
         {
-            string input = PDFService.LerPDF(inputFile);
+            // Calcular frequência dos caracteres
+            Dictionary<char, int> frequencyMap = new();
+            foreach (char c in input)
+            {
+                if (!frequencyMap.ContainsKey(c))
+                    frequencyMap[c] = 1;
+                else
+                    frequencyMap[c]++;
+            }
 
-            Dictionary<char, int> frequencyMap = input.GroupBy(c => c).ToDictionary(g => g.Key, g => g.Count());
+            // Criar nós iniciais
             List<HuffmanNode> nodes = frequencyMap.Select(pair => new HuffmanNode { Symbol = pair.Key, Frequency = pair.Value }).ToList();
 
             while (nodes.Count > 1)
             {
+                // Ordenar os nós por frequência
                 nodes = nodes.OrderBy(node => node.Frequency).ToList();
+
+                // Criar nó pai
                 HuffmanNode parent = new()
                 {
                     Frequency = nodes[0].Frequency + nodes[1].Frequency,
@@ -29,10 +40,9 @@ namespace DataCompress.Service.Huffman
                 nodes.Add(parent);
             }
 
-            HuffmanNode root = nodes.Single();
-
+            // Gerar códigos Huffman
             Dictionary<char, string> encodingMap = new();
-            Traverse(root, "", encodingMap);
+            Traverse(nodes.Single(), "", encodingMap);
 
             return encodingMap;
         }
