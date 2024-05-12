@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8PBiKJnOM38ZaL9JBU4HXj02/OfclOgIrJjmL/S0i/ZKgc3kIr7/lt69tWxkqMwygVZhhTmYLBbhZgJZXmY67Q==",
+  "dgSpecHash": "aow5ni3HCAtVNh0oPp9e65l9iBqPLMHsVwspvsnSFTjJ/+nc/rBaoRSRR5CAGUb+Xw7Uq7efMU7DPbYFxTcW1A==",
   "success": true,
   "projectFilePath": "C:\\Users\\dddd\\source\\repos\\TCC-CompressBenchmark\\DataCompress.Benchmark\\DataCompress.Benchmark.csproj",
   "expectedPackageFiles": [
@@ -39,7 +39,6 @@
     "C:\\Users\\dddd\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\dddd\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\dddd\\.nuget\\packages\\mongodb.bson\\2.24.0\\mongodb.bson.2.24.0.nupkg.sha512",
-    "C:\\Users\\dddd\\.nuget\\packages\\mongodb.driver\\2.24.0\\mongodb.driver.2.24.0.nupkg.sha512",
     "C:\\Users\\dddd\\.nuget\\packages\\mongodb.driver.core\\2.24.0\\mongodb.driver.core.2.24.0.nupkg.sha512",
     "C:\\Users\\dddd\\.nuget\\packages\\mongodb.libmongocrypt\\1.8.2\\mongodb.libmongocrypt.1.8.2.nupkg.sha512",
     "C:\\Users\\dddd\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",

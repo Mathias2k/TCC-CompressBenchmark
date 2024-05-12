@@ -32,8 +32,8 @@ namespace DataCompress.Service.PDF
         }
         public static void GerarPDF()
         {
-            string outputPath = "random_text_file_50mb.pdf";
-            double targetFileSizeMB = 50;
+            string outputPath = "repetitive_text_file_10mb.pdf";
+            double targetFileSizeMB = 10;
 
             // Create a new PDF document
             using (var writer = new PdfWriter(outputPath))
@@ -45,7 +45,17 @@ namespace DataCompress.Service.PDF
                 double currentFileSizeMB = 0;
                 while (currentFileSizeMB < targetFileSizeMB)
                 {
-                    //string randomPhrase = GenerateRandomWord(new Random().Next(3, 12));
+                    //string randomPhrase = GenerateRandomWord(new Random().Next(3, 12)) + " "
+                    //                     + GenerateRandomWord(new Random().Next(3, 12)) + " "
+                    //                     + GenerateRandomWord(new Random().Next(3, 12)) + " "
+                    //                     + GenerateRandomWord(new Random().Next(3, 12)) + " "
+                    //                     + GenerateRandomWord(new Random().Next(3, 12)) + " "
+                    //                     + GenerateRandomWord(new Random().Next(3, 12)) + " "
+                    //                     + GenerateRandomWord(new Random().Next(3, 12)) + " "
+                    //                     + GenerateRandomWord(new Random().Next(3, 12)) + " "
+                    //                     + GenerateRandomWord(new Random().Next(3, 12)) + " "
+                    //                     + GenerateRandomWord(new Random().Next(3, 12)) + " "
+                    //                     + GenerateRandomWord(new Random().Next(3, 12)) + " ";
                     string randomPhrase = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ";
 
                     document.Add(new Paragraph(randomPhrase));

@@ -113,10 +113,6 @@
               "target": "Package",
               "version": "[0.13.8, )"
             },
-            "MongoDB.Driver": {
-              "target": "Package",
-              "version": "[2.24.0, )"
-            },
             "MongoDB.Driver.Core": {
               "target": "Package",
               "version": "[2.24.0, )"
